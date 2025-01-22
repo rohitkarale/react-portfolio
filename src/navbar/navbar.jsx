@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'boxicons/css/boxicons.min.css'; // Import Boxicons
-import './Navbar.css'; // Link to your CSS
+import './navbar.css'; // Link to your CSS
 
 const Navbar = () => {
   const [menuActive, setMenuActive] = useState(false);
