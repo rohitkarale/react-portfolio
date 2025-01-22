@@ -14,7 +14,7 @@ const Projects = () => {
           </h2>
           <div className="portfolio-container">
             <div className="portfolio-box small-image">
-              <img src="src\assets\SkillSwap.png" alt="SkillSwap Project Thumbnail" loading="lazy" />
+              <img src="SkillSwap.png" alt="SkillSwap Project Thumbnail" loading="lazy" />
               <div className="portfolio-layer">
                 <p>SkillSwap - Peer-to-Peer Learning Platform</p>
                 <a href="https://github.com/rohitkarale" target="_blank" rel="noopener noreferrer">
@@ -33,7 +33,7 @@ const Projects = () => {
           <div className="portfolio-container">
             {/* Project 1 */}
             <div className="portfolio-box">
-              <img src="src\assets\e-agro.png" alt="Car Rental Project Thumbnail" loading="lazy" />
+              <img src="e-agro.png" alt="Car Rental Project Thumbnail" loading="lazy" />
               <div className="portfolio-layer">
                 <p>e-Agro</p>
                 <p>Client: Indosoft Technology</p>
@@ -45,7 +45,7 @@ const Projects = () => {
 
             {/* Project 2 */}
             <div className="portfolio-box">
-              <img src="src\assets\Car-Rental-ERP.png" alt="AHPI Project Thumbnail" loading="lazy" />
+              <img src="Car-Rental-ERP.png" alt="AHPI Project Thumbnail" loading="lazy" />
               <div className="portfolio-layer">
                 <p>Car Rental Smart ERP</p>
                 <p>City Mall</p>
@@ -57,7 +57,7 @@ const Projects = () => {
 
             {/* Project 3 */}
             <div className="portfolio-box">
-              <img src="src\assets\Data-Transform.png" alt="ETL Project Thumbnail" loading="lazy" />
+              <img src="Data-Transform.png" alt="ETL Project Thumbnail" loading="lazy" />
               <div className="portfolio-layer">
                 <p>Data Integration & ETL (Insurance)</p>
                 <p>Client: Star Health</p>

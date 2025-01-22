@@ -14,7 +14,7 @@ const About = () => {
       <section className="about" id="about">
         <div className="about-img">
           <img
-            src="src\assets\About.png"
+            src="About.png"
             alt="Profile Photo of About"
             loading="lazy"
           />

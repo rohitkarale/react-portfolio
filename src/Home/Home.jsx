@@ -42,7 +42,7 @@ const Home = () => {
                 </div>
                 <div className="home-img">
                     <img
-                        src="src\assets\newimage.png" // Ensure the image is in the `public` folder
+                        src="newimage.png" // Ensure the image is in the `public` folder
                         alt="Profile Photo of Rohit Navnath Karale"
                         loading="lazy"
                     />

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import './Contact.css';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import styles for Toast
+import 'react-toastify/dist/ReactToastify.css';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formValues, setFormValues] = useState({
@@ -56,10 +57,51 @@ const Contact = () => {
     });
 
     if (Object.keys(formErrors).length === 0) {
-      console.log("Form submitted:", formValues);
-      toast.success("Message sent successfully!");  // Success Toast
+      // EmailJS API integration
+      emailjs
+        .send(
+          'service_b6knl4c', // Replace with your EmailJS Service ID
+          'template_z4oj7hd', // Replace with your EmailJS Template ID
+          {
+            fullName: formValues.fullName,
+            email: formValues.email,
+            mobileNumber: formValues.mobileNumber,
+            subject: formValues.subject,
+            message: formValues.message,
+          },
+          'wqp2NbQXMDIV9T7cc' // Replace with your EmailJS Public Key
+        )
+        .then(
+          (response) => {
+            toast.success("🎉 Your message has been sent successfully!", {
+              position: "top-right",
+              autoClose: 5000,
+              closeOnClick: true,
+            });
+            console.log('Email sent successfully!', response.status, response.text);
+            setFormValues({
+              fullName: "",
+              email: "",
+              mobileNumber: "",
+              subject: "",
+              message: "",
+            });
+          },
+          (error) => {
+            toast.error("😥 Oops! Something went wrong. Please try again.", {
+              position: "top-right",
+              autoClose: 5000,
+              closeOnClick: true,
+            });
+            console.error('Error while sending email:', error);
+          }
+        );
     } else {
-      toast.error("There was an issue with your message. Please try again."); // Error Toast
+      toast.warning("⚠️ Please fix the errors before submitting.", {
+        position: "top-right",
+        autoClose: 5000,
+        closeOnClick: true,
+      });
     }
   };
 
@@ -151,14 +193,14 @@ const Contact = () => {
       </section>
       <div className="contact-img">
         <img
-          src="src\assets\Contact.png" // Ensure the image is in the `public` folder
+          src="Contact.png" // Ensure the image is in the `public` folder
           alt="Contact Photo"
           loading="lazy"
         />
       </div>
 
       {/* Toast Container */}
-      <ToastContainer position="top-right" autoClose={5000} />
+      <ToastContainer />
     </div>
   );
 };
