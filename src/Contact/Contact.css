@@ -1,0 +1,171 @@
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #1e2a38, #4e5d6c);
+}
+
+.contact {
+    max-width: 600px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 50%;
+    order: 2;
+    margin-right: 150px;
+}
+
+.contact .heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact .heading span {
+    color: #007bff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.input-box input,
+textarea {
+    flex: 1 1 calc(50% - 20px); /* Make inputs take 50% of the available width */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus,
+textarea:focus {
+    border-color: #007bff;
+}
+
+textarea {
+    width: 100%; /* Ensure the textarea takes full width */
+    resize: none;
+}
+
+.error {
+    font-size: 0.9rem;
+    color: #d9534f;
+    margin-top: 5px;
+}
+
+.btn {
+    background: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.contact-img {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    margin-top: 20px; /* Added margin-top to create some space in mobile view */
+}
+
+.contact-img img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .input-box input,
+    textarea {
+        flex: 1 1 100%; /* Allow form inputs to take full width on smaller screens */
+    }
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+
+    .contact-img {
+        flex: 1 1 100%;
+        max-width: 100%; /* Ensure image is responsive */
+    }
+
+    .contact-img img {
+        max-width: 100%;
+        border-radius: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact .heading {
+        font-size: 1.5rem; /* Slightly smaller font size for very small screens */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 8px 16px;
+    }
+
+    .input-box input,
+    textarea {
+        font-size: 0.9rem; /* Make input text slightly smaller */
+    }
+
+    .error {
+        font-size: 0.8rem; /* Slightly smaller error message */
+    }
+}
+
+.alert {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.alert.success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.alert.error {
+    background-color: #dc3545;
+    color: #fff;
+}

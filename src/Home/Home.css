@@ -1,0 +1,126 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Home Container */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e2a38, #4e5d6c);
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Home Content */
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+.home-content h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.home-content h3 span {
+    color: #00adb5;
+    font-weight: 600;
+}
+
+.home-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #d1d9e6;
+}
+
+/* Social Media Links */
+.social-media {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-media a:hover {
+    color: #00adb5;
+    transform: scale(1.2);
+}
+
+/* Download Button */
+.btn {
+    display: inline-block;
+    background: #00adb5;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #007f87;
+    transform: translateY(-3px);
+}
+
+/* Home Image */
+.home-img img {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .home-img img {
+        max-width: 250px;
+    }
+}

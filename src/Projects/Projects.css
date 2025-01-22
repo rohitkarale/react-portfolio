@@ -1,0 +1,204 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container for all the content */
+.container {
+  background: linear-gradient(135deg, #1e2a38, #4e5d6c);
+  padding: 20px;
+}
+
+/* Heading Style */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5rem;
+  color: #fff; /* Adjusted font color for better contrast */
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 40px 0;
+  color: #fff; /* White text for contrast */
+}
+
+.portfolio .heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #00adb5; /* Light teal for contrast */
+}
+
+.portfolio .heading span {
+  color: #ddd; /* Slightly lighter text for span */
+  font-weight: 600;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Portfolio Box */
+.portfolio-box {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image inside Portfolio Box */
+.portfolio-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Layer for text and icons on hover */
+.portfolio-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; /* White text on dark overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background to make text stand out */
+  width: 100%;
+}
+
+/* Hover effect for portfolio box */
+.portfolio-box:hover .portfolio-layer {
+  opacity: 1;
+}
+
+/* Text inside the layer */
+.portfolio-layer p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Link styling inside layer */
+.portfolio-layer a {
+  font-size: 1.5rem;
+  color: #00adb5; /* Bright teal for links */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on the link */
+.portfolio-layer a:hover {
+  transform: scale(1.2);
+}
+
+/* Small Image Class for "SkillSwap" */
+.small-image img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.small-image:hover img {
+  transform: scale(1);
+}
+
+/* App Navbar (Can be customized) */
+nav {
+  background-color: #1e2a38;
+  padding: 20px;
+  text-align: center;
+  color: #fff; /* White text for navbar */
+}
+
+/* App Footer (Can be customized) */
+footer {
+  background-color: #1e2a38;
+  padding: 20px;
+  text-align: center;
+  color: #fff; /* White text for footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Heading font size */
+  h1 {
+    font-size: 2rem;
+  }
+
+  .portfolio .heading {
+    font-size: 1.6rem;
+  }
+
+  /* Portfolio Container */
+  .portfolio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust portfolio box width */
+  .portfolio-box {
+    max-width: 90%;
+    margin: 15px 0;
+  }
+
+  /* Portfolio Image Scaling */
+  .portfolio-box img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust text size in the layer */
+  .portfolio-layer p {
+    font-size: 1rem;
+  }
+
+  /* Adjust link size */
+  .portfolio-layer a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Additional styling for very small devices (portrait phones) */
+@media (max-width: 480px) {
+  .portfolio .heading {
+    font-size: 1.4rem;
+  }
+
+  .portfolio-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .portfolio-box {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Adjust font size for text inside the portfolio layer */
+  .portfolio-layer p {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-layer a {
+    font-size: 1.1rem;
+  }
+
+  /* Adjust main header font */
+  h1 {
+    font-size: 1.8rem;
+  }
+}
