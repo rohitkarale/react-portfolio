@@ -4,7 +4,7 @@
     top: 20%;
     left: 23%;
     width: 50%;
-    height: 50%;
+    height: 70%;
     background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black with reduced opacity */
     backdrop-filter: blur(15px); /* Stronger blur effect */
     -webkit-backdrop-filter: blur(15px); /* Ensure compatibility with Safari */
@@ -43,7 +43,7 @@
     color: #ffffff; /* Darker text for contrast */
     text-align: center;
     margin-bottom: 20px;
-    margin-right: 100px;
+    margin-right:50px;
 }
 
 /* Modal Body */
@@ -51,11 +51,11 @@
     display: flex;
     flex-direction: column;
     gap: 25px; /* Space between elements */
+    width: 100%;
 }
 
 /* Input Fields */
-.input-field,
-.otp-input {
+.input-field {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
@@ -65,8 +65,7 @@
 }
 
 /* Focused Input Field */
-.input-field:focus,
-.otp-input:focus {
+.input-field:focus {
     border-color: #007bff; /* Blue border on focus */
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle focus glow */
@@ -113,37 +112,6 @@
         font-size: 0.9rem; /* Adjust button size */
         padding: 8px;
     }
-}
-
-/* OTP Modal */
-.otp-modal {
-    background: #ffffff; /* White background */
-    border-radius: 10px;
-    width: 40%; /* Adjust size */
-    padding: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    text-align: center;
-}
-
-.otp-message {
-    font-size: 1.2rem;
-    margin: 15px 0;
-    color: #333; /* Neutral text color */
-}
-
-.close-btn {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.close-btn:hover {
-    background: #0056b3;
 }
 
 /* Success Modal */
